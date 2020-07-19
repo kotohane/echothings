@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on ALL in</title>
-    <link>localhost/tags/</link>
-    <description>Recent content in Tags on ALL in</description>
+    <title>Tags on overit</title>
+    <link>kotohane.github.io/tags/</link>
+    <description>Recent content in Tags on overit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Mon, 20 Jul 2020 00:39:54 +0800</lastBuildDate>
     
-	<atom:link href="localhost/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="kotohane.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>untagged</title>
-      <link>localhost/tags/untagged/</link>
+      <link>kotohane.github.io/tags/untagged/</link>
       <pubDate>Mon, 20 Jul 2020 00:39:54 +0800</pubDate>
       
-      <guid>localhost/tags/untagged/</guid>
+      <guid>kotohane.github.io/tags/untagged/</guid>
       <description></description>
     </item>
     
