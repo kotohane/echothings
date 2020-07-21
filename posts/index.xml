@@ -6,8 +6,25 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Mon, 20 Jul 2020 00:39:54 +0800</lastBuildDate>
+        <lastBuildDate>Tue, 21 Jul 2020 13:46:38 +0800</lastBuildDate>
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Some problems during configing url of hugo</title>
+            <link>/posts/new/</link>
+            <pubDate>Tue, 21 Jul 2020 13:46:38 +0800</pubDate>
+            
+            <guid>/posts/new/</guid>
+            <description>Problem: 设定posts和tags目录时跳转不对，会出现类似于&amp;lt;website&amp;gt;/&amp;lt;website&amp;gt;/post之类的情况
+Solution: 在config中设置post item的跳转地址为post，代表绝对路径，而不是/post，代表相对位置。
+如果设置为/post，在主界面可以正常跳转，但在其他界面无法转到正常的页面。./post也同理。</description>
+            <content type="html"><![CDATA[<h3 id="problem">Problem:</h3>
+<p>设定posts和tags目录时跳转不对，会出现类似于<code>&lt;website&gt;/&lt;website&gt;/post</code>之类的情况</p>
+<h3 id="solution">Solution:</h3>
+<p>在config中设置post item的跳转地址为<code>post</code>，代表绝对路径，而不是<code>/post</code>，代表相对位置。</p>
+<p>如果设置为<code>/post</code>，在主界面可以正常跳转，但在其他界面无法转到正常的页面。<code>./post</code>也同理。</p>
+]]></content>
+        </item>
         
         <item>
             <title>Firstpost</title>
