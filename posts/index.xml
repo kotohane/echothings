@@ -6,8 +6,219 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 21 Jul 2020 13:46:38 +0800</lastBuildDate>
+        <lastBuildDate>Mon, 10 Aug 2020 00:39:24 +0800</lastBuildDate>
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>(Course Overview) Control of Mobile Robots</title>
+            <link>/posts/cource-mobilerobot/</link>
+            <pubDate>Mon, 10 Aug 2020 00:39:24 +0800</pubDate>
+            
+            <guid>/posts/cource-mobilerobot/</guid>
+            <description>class info  courcera Getech class link  cource review not so difficult
+Notes Mobile Robots Decrete time: $$ x_{k+1}=f(x_k, u_k) $$ Continuous time: $$ \frac{dx}{dt}=\dot x =f(x, u) $$ c.s. : map continuous -&amp;gt; discrete
+Taylor approx: $$ x(k\delta t+\delta t)=x(k\delta t)+\delta t\cdot \dot{x}(k\delta t) $$
+PID regulator $$ u(t) = K_pe(t)+K_i \int^t_0{e(\tau)d\tau}+ K_d\frac{de(t)}{dt} $$
+ P : contribute to stability, resp. medium rate I : tracking, resp. slow rate, may cause oscillation D: resp.</description>
+            <content type="html"><![CDATA[<h2 id="class-info">class info</h2>
+<ul>
+<li>courcera</li>
+<li>Getech</li>
+<li><a href="https://www.coursera.org/learn/mobile-robot/home/welcome">class link</a></li>
+</ul>
+<h2 id="cource-review">cource review</h2>
+<p>not so difficult</p>
+<h2 id="notes">Notes</h2>
+<h3 id="mobile-robots">Mobile Robots</h3>
+<p>Decrete time:
+$$
+x_{k+1}=f(x_k, u_k)
+$$
+Continuous time:
+$$
+\frac{dx}{dt}=\dot x =f(x, u)
+$$
+c.s. : map continuous -&gt; discrete</p>
+<p>Taylor approx:
+$$
+x(k\delta t+\delta t)=x(k\delta t)+\delta t\cdot \dot{x}(k\delta t)
+$$</p>
+<h3 id="pid-regulator">PID regulator</h3>
+<p>$$
+u(t) = K_pe(t)+K_i \int^t_0{e(\tau)d\tau}+ K_d\frac{de(t)}{dt}
+$$</p>
+<ul>
+<li>P : contribute to stability, resp. medium rate</li>
+<li>I : tracking, resp. slow rate, may cause oscillation</li>
+<li>D: resp. Fast rate, sensitive to noise</li>
+<li>PID : most uesd low level control ( stability not guarantee )</li>
+</ul>
+<p><strong>implement</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">read e
+e_dot = e <span style="color:#f92672">-</span> e_old
+E <span style="color:#f92672">+</span>= e
+u = kp<span style="color:#f92672">*</span>e <span style="color:#f92672">+</span> kd<span style="color:#f92672">*</span>e_dot <span style="color:#f92672">+</span> ki <span style="color:#f92672">*</span> E
+e_old = e
+</code></pre></div><h3 id="behaviors">Behaviors</h3>
+<ol>
+<li>Go-to-goal</li>
+<li>Avoid-obstacles</li>
+<li>Follow-walls-clockwise</li>
+<li>Follow-walls-counter-clockwise</li>
+<li>induce mode</li>
+</ol>
+<p><strong>arbitration</strong></p>
+<ol>
+<li>Winner takers all == hard switches</li>
+<li>Blending == conbined behavior</li>
+</ol>
+<h3 id="models">Models</h3>
+<p>$$
+\begin{cases}
+\dot{x}=Ax+Bu \\
+y=Cx
+\end{cases}
+$$</p>
+<h4 id="point-mass">point mass</h4>
+<p>$$
+\begin{cases}
+x_1 = p \\
+x_2 = \dot{p} = \dot{x}
+\end{cases}
+$$</p>
+<p>$$
+\dot x =
+\begin{bmatrix}
+x_2 \\
+u
+\end{bmatrix} =
+\begin{bmatrix}
+0 &amp; 1 \\
+0 &amp; 0
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix}
++
+\begin{bmatrix}
+0 \\
+1
+\end{bmatrix}
+u
+$$</p>
+<p>$$
+A =
+\begin{bmatrix}
+0 &amp; 1 \\
+0 &amp; 0
+\end{bmatrix}
+,
+B =
+\begin{bmatrix}
+0 \\
+1
+\end{bmatrix}
+,
+C =
+\begin{bmatrix}
+1 &amp; 0
+\end{bmatrix}
+$$</p>
+<h4 id="car-model">Car model</h4>
+<p>$$
+A =
+\begin{bmatrix}
+0 &amp; 1 \\
+0 &amp; -\gamma
+\end{bmatrix}
+,
+B =
+\begin{bmatrix}
+0 \\
+c/m
+\end{bmatrix}
+$$</p>
+<h3 id="linearization">Linearization</h3>
+<p>$$
+A = \frac{\partial f}{\partial x} (x_0, u_0),
+B = \frac{\partial f}{\partial u} (x_0, u_0),
+C = \frac{\partial h}{\partial x} (x_0)
+$$</p>
+<p>in this process, <strong>Jacobian Matrix</strong>:
+$$
+\frac{\partial f}{\partial u} = \left[
+\begin{matrix}
+\frac{\partial f_1}{\partial u_1} &amp; \frac{\partial f_1}{\partial u_2} &amp;
+\frac{\partial f_1}{\partial u_3} &amp; … &amp; 	\frac{\partial f_1}{\partial u_m} \\
+\frac{\partial f_2}{\partial u_1} &amp; … &amp; … &amp; … &amp;…\\
+\frac{\partial f_3}{\partial u_1} &amp; … &amp; … &amp; … &amp;… \\
+… &amp; … &amp; … &amp; … &amp;…\\
+\frac{\partial f_n}{\partial u_1} &amp; … &amp; … &amp; … &amp;
+\frac{\partial f_n}{\partial u_m}
+\end{matrix}
+\right]
+$$</p>
+<h3 id="stability">Stability</h3>
+<ul>
+<li>
+<p>Asymptotically stable:
+$$
+x(t) \rightarrow 0, \forall x(0) \\
+Re(\lambda)&lt;0, \forall x \in eig(A), \ \ \ if\ and\ only\ if
+$$</p>
+</li>
+<li>
+<p>Unstable:
+$$
+\exist x(0), ||x(t)|| \rightarrow \infty \\
+\exist \lambda \in eig(A), Re(\lambda)&gt;0, \ \ \ if
+$$</p>
+</li>
+<li>
+<p>critically stable:
+$$
+Re(\lambda) \leq 0, \forall \lambda \in eig(A), \ \ \ only\ if
+$$</p>
+</li>
+</ul>
+<h3 id="controlability">Controlability</h3>
+<ul>
+<li>
+<p>Completely Controllable (CC) Theorem 1:</p>
+<p><strong>The system is CC if and only if</strong>
+$$
+rank(\Gamma)=n
+$$</p>
+</li>
+<li>
+<p>Completely Controllable (CC) Theorem 2:</p>
+<p><strong>Pole-placement to arbitrary eigenvalues is possible if and only of the system is CC</strong></p>
+</li>
+</ul>
+<p>Code in Matlab:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">G = ctrb(A, B)
+rank(G)
+</code></pre></div><h3 id="obvervability">Obvervability</h3>
+<p><strong>CO def.</strong> : system is completely observable if it is possible to recover the initial state from the output</p>
+<ul>
+<li>
+<p>Completely Observable (CO) Theorem 1:</p>
+<p><strong>The system is CO if and only if</strong>
+$$
+rank(\Omega) = n
+$$</p>
+</li>
+<li>
+<p>Completely Observable (CO) Theorem 2:</p>
+<p><strong>Pole-placement to arbitrary eigenvalues is possible if and only if the system is CO</strong></p>
+</li>
+</ul>
+<h3 id="plan-structure">Plan structure</h3>
+<p>Obverse + error &ndash;&gt; controller</p>
+<p>Response &ndash;&gt; actual world</p>
+]]></content>
+        </item>
         
         <item>
             <title>Some problems during configing url of hugo</title>

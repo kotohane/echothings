@@ -80,6 +80,17 @@ Solution: 在config中设置post item的跳转地址为post，代表绝对路径
 
 
 
+
+
+<link rel="stylesheet" href="/js/katex/katex.min.css" >
+<script src="/js/katex/katex.min.js" > </script>
+<script src="/js/katex/contrib/auto-render.min.js" ></script>
+ 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body);
+    });
+</script>
     </head>
 
     <body class="dark-theme">
@@ -200,6 +211,13 @@ Solution: 在config中设置post item的跳转地址为post，代表绝对路径
         </div>
 
         <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="/posts/cource-mobilerobot/">
+                <span class="button__icon">←</span>
+                <span class="button__text">(Course Overview) Control of Mobile Robots</span>
+              </a>
+            </span>
           
 
           

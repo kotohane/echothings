@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="class info  courcera Getech class link  cource review not so difficult
+Notes Mobile Robots Decrete time: $$ x_{k&#43;1}=f(x_k, u_k) $$ Continuous time: $$ \frac{dx}{dt}=\dot x =f(x, u) $$ c.s. : map continuous -&amp;gt; discrete
+Taylor approx: $$ x(k\delta t&#43;\delta t)=x(k\delta t)&#43;\delta t\cdot \dot{x}(k\delta t) $$
+PID regulator $$ u(t) = K_pe(t)&#43;K_i \int^t_0{e(\tau)d\tau}&#43; K_d\frac{de(t)}{dt} $$
+ P : contribute to stability, resp. medium rate I : tracking, resp. slow rate, may cause oscillation D: resp." />
+<meta name="keywords" content=", course, robot" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="/posts/cource-mobilerobot/" />
+
+
+    <title>
+        
+            (Course Overview) Control of Mobile Robots :: Sapphire Echo 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.d1ea4af8fd04fb24a4f8b882ea54bd04eb245427ca4baf527c81a5dab071410b.css">
+
+
+
+
+
+
+<meta itemprop="name" content="(Course Overview) Control of Mobile Robots">
+<meta itemprop="description" content="class info  courcera Getech class link  cource review not so difficult
+Notes Mobile Robots Decrete time: $$ x_{k&#43;1}=f(x_k, u_k) $$ Continuous time: $$ \frac{dx}{dt}=\dot x =f(x, u) $$ c.s. : map continuous -&gt; discrete
+Taylor approx: $$ x(k\delta t&#43;\delta t)=x(k\delta t)&#43;\delta t\cdot \dot{x}(k\delta t) $$
+PID regulator $$ u(t) = K_pe(t)&#43;K_i \int^t_0{e(\tau)d\tau}&#43; K_d\frac{de(t)}{dt} $$
+ P : contribute to stability, resp. medium rate I : tracking, resp. slow rate, may cause oscillation D: resp.">
+<meta itemprop="datePublished" content="2020-08-10T00:39:24&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-10T00:39:24&#43;08:00" />
+<meta itemprop="wordCount" content="505">
+<meta itemprop="image" content="/"/>
+
+
+
+<meta itemprop="keywords" content="course,robot," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/"/>
+
+<meta name="twitter:title" content="(Course Overview) Control of Mobile Robots"/>
+<meta name="twitter:description" content="class info  courcera Getech class link  cource review not so difficult
+Notes Mobile Robots Decrete time: $$ x_{k&#43;1}=f(x_k, u_k) $$ Continuous time: $$ \frac{dx}{dt}=\dot x =f(x, u) $$ c.s. : map continuous -&gt; discrete
+Taylor approx: $$ x(k\delta t&#43;\delta t)=x(k\delta t)&#43;\delta t\cdot \dot{x}(k\delta t) $$
+PID regulator $$ u(t) = K_pe(t)&#43;K_i \int^t_0{e(\tau)d\tau}&#43; K_d\frac{de(t)}{dt} $$
+ P : contribute to stability, resp. medium rate I : tracking, resp. slow rate, may cause oscillation D: resp."/>
+
+
+
+    <meta property="og:title" content="(Course Overview) Control of Mobile Robots" />
+<meta property="og:description" content="class info  courcera Getech class link  cource review not so difficult
+Notes Mobile Robots Decrete time: $$ x_{k&#43;1}=f(x_k, u_k) $$ Continuous time: $$ \frac{dx}{dt}=\dot x =f(x, u) $$ c.s. : map continuous -&gt; discrete
+Taylor approx: $$ x(k\delta t&#43;\delta t)=x(k\delta t)&#43;\delta t\cdot \dot{x}(k\delta t) $$
+PID regulator $$ u(t) = K_pe(t)&#43;K_i \int^t_0{e(\tau)d\tau}&#43; K_d\frac{de(t)}{dt} $$
+ P : contribute to stability, resp. medium rate I : tracking, resp. slow rate, may cause oscillation D: resp." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/cource-mobilerobot/" />
+<meta property="og:image" content="/"/>
+<meta property="article:published_time" content="2020-08-10T00:39:24+08:00" />
+<meta property="article:modified_time" content="2020-08-10T00:39:24+08:00" /><meta property="og:site_name" content="Sapphire Echo" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-08-10 00:39:24 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/js/katex/katex.min.css" >
+<script src="/js/katex/katex.min.js" > </script>
+<script src="/js/katex/contrib/auto-render.min.js" ></script>
+ 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body);
+    });
+</script>
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">Home</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/posts">Post</a></li><li><a href="/tags">Tag</a></li><li><a href="https://kotohane.me">About</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        3 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="/posts/cource-mobilerobot/">(Course Overview) Control of Mobile Robots</a>
+      </h1>
+
+      
+
+      <div class="post-content">
+        <h2 id="class-info">class info</h2>
+<ul>
+<li>courcera</li>
+<li>Getech</li>
+<li><a href="https://www.coursera.org/learn/mobile-robot/home/welcome">class link</a></li>
+</ul>
+<h2 id="cource-review">cource review</h2>
+<p>not so difficult</p>
+<h2 id="notes">Notes</h2>
+<h3 id="mobile-robots">Mobile Robots</h3>
+<p>Decrete time:
+$$
+x_{k+1}=f(x_k, u_k)
+$$
+Continuous time:
+$$
+\frac{dx}{dt}=\dot x =f(x, u)
+$$
+c.s. : map continuous -&gt; discrete</p>
+<p>Taylor approx:
+$$
+x(k\delta t+\delta t)=x(k\delta t)+\delta t\cdot \dot{x}(k\delta t)
+$$</p>
+<h3 id="pid-regulator">PID regulator</h3>
+<p>$$
+u(t) = K_pe(t)+K_i \int^t_0{e(\tau)d\tau}+ K_d\frac{de(t)}{dt}
+$$</p>
+<ul>
+<li>P : contribute to stability, resp. medium rate</li>
+<li>I : tracking, resp. slow rate, may cause oscillation</li>
+<li>D: resp. Fast rate, sensitive to noise</li>
+<li>PID : most uesd low level control ( stability not guarantee )</li>
+</ul>
+<p><strong>implement</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">read e
+e_dot = e <span style="color:#f92672">-</span> e_old
+E <span style="color:#f92672">+</span>= e
+u = kp<span style="color:#f92672">*</span>e <span style="color:#f92672">+</span> kd<span style="color:#f92672">*</span>e_dot <span style="color:#f92672">+</span> ki <span style="color:#f92672">*</span> E
+e_old = e
+</code></pre></div><h3 id="behaviors">Behaviors</h3>
+<ol>
+<li>Go-to-goal</li>
+<li>Avoid-obstacles</li>
+<li>Follow-walls-clockwise</li>
+<li>Follow-walls-counter-clockwise</li>
+<li>induce mode</li>
+</ol>
+<p><strong>arbitration</strong></p>
+<ol>
+<li>Winner takers all == hard switches</li>
+<li>Blending == conbined behavior</li>
+</ol>
+<h3 id="models">Models</h3>
+<p>$$
+\begin{cases}
+\dot{x}=Ax+Bu \\
+y=Cx
+\end{cases}
+$$</p>
+<h4 id="point-mass">point mass</h4>
+<p>$$
+\begin{cases}
+x_1 = p \\
+x_2 = \dot{p} = \dot{x}
+\end{cases}
+$$</p>
+<p>$$
+\dot x =
+\begin{bmatrix}
+x_2 \\
+u
+\end{bmatrix} =
+\begin{bmatrix}
+0 &amp; 1 \\
+0 &amp; 0
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix}
++
+\begin{bmatrix}
+0 \\
+1
+\end{bmatrix}
+u
+$$</p>
+<p>$$
+A =
+\begin{bmatrix}
+0 &amp; 1 \\
+0 &amp; 0
+\end{bmatrix}
+,
+B =
+\begin{bmatrix}
+0 \\
+1
+\end{bmatrix}
+,
+C =
+\begin{bmatrix}
+1 &amp; 0
+\end{bmatrix}
+$$</p>
+<h4 id="car-model">Car model</h4>
+<p>$$
+A =
+\begin{bmatrix}
+0 &amp; 1 \\
+0 &amp; -\gamma
+\end{bmatrix}
+,
+B =
+\begin{bmatrix}
+0 \\
+c/m
+\end{bmatrix}
+$$</p>
+<h3 id="linearization">Linearization</h3>
+<p>$$
+A = \frac{\partial f}{\partial x} (x_0, u_0),
+B = \frac{\partial f}{\partial u} (x_0, u_0),
+C = \frac{\partial h}{\partial x} (x_0)
+$$</p>
+<p>in this process, <strong>Jacobian Matrix</strong>:
+$$
+\frac{\partial f}{\partial u} = \left[
+\begin{matrix}
+\frac{\partial f_1}{\partial u_1} &amp; \frac{\partial f_1}{\partial u_2} &amp;
+\frac{\partial f_1}{\partial u_3} &amp; … &amp; 	\frac{\partial f_1}{\partial u_m} \\
+\frac{\partial f_2}{\partial u_1} &amp; … &amp; … &amp; … &amp;…\\
+\frac{\partial f_3}{\partial u_1} &amp; … &amp; … &amp; … &amp;… \\
+… &amp; … &amp; … &amp; … &amp;…\\
+\frac{\partial f_n}{\partial u_1} &amp; … &amp; … &amp; … &amp;
+\frac{\partial f_n}{\partial u_m}
+\end{matrix}
+\right]
+$$</p>
+<h3 id="stability">Stability</h3>
+<ul>
+<li>
+<p>Asymptotically stable:
+$$
+x(t) \rightarrow 0, \forall x(0) \\
+Re(\lambda)&lt;0, \forall x \in eig(A), \ \ \ if\ and\ only\ if
+$$</p>
+</li>
+<li>
+<p>Unstable:
+$$
+\exist x(0), ||x(t)|| \rightarrow \infty \\
+\exist \lambda \in eig(A), Re(\lambda)&gt;0, \ \ \ if
+$$</p>
+</li>
+<li>
+<p>critically stable:
+$$
+Re(\lambda) \leq 0, \forall \lambda \in eig(A), \ \ \ only\ if
+$$</p>
+</li>
+</ul>
+<h3 id="controlability">Controlability</h3>
+<ul>
+<li>
+<p>Completely Controllable (CC) Theorem 1:</p>
+<p><strong>The system is CC if and only if</strong>
+$$
+rank(\Gamma)=n
+$$</p>
+</li>
+<li>
+<p>Completely Controllable (CC) Theorem 2:</p>
+<p><strong>Pole-placement to arbitrary eigenvalues is possible if and only of the system is CC</strong></p>
+</li>
+</ul>
+<p>Code in Matlab:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-matlab" data-lang="matlab">G = ctrb(A, B)
+rank(G)
+</code></pre></div><h3 id="obvervability">Obvervability</h3>
+<p><strong>CO def.</strong> : system is completely observable if it is possible to recover the initial state from the output</p>
+<ul>
+<li>
+<p>Completely Observable (CO) Theorem 1:</p>
+<p><strong>The system is CO if and only if</strong>
+$$
+rank(\Omega) = n
+$$</p>
+</li>
+<li>
+<p>Completely Observable (CO) Theorem 2:</p>
+<p><strong>Pole-placement to arbitrary eigenvalues is possible if and only if the system is CO</strong></p>
+</li>
+</ul>
+<h3 id="plan-structure">Plan structure</h3>
+<p>Obverse + error &ndash;&gt; controller</p>
+<p>Response &ndash;&gt; actual world</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+            <line x1="7" y1="7" x2="7" y2="7"></line>
+          </svg><span class="tag"><a href="/tags/course/">course</a></span><span class="tag"><a href="/tags/robot/">robot</a></span>
+        </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        505 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        2020-08-10 00:39 CST
+      </p>
+    </div>
+
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+
+        <div class="pagination__buttons">
+          
+
+          
+            <span class="button next">
+              <a href="/posts/new/">
+                <span class="button__text">Some problems during configing url of hugo</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            
+                <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            
+            <span> <a href="/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>
