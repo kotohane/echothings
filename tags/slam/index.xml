@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Echo Things</title>
-    <link>/</link>
-    <description>Recent content on Echo Things</description>
+    <title>SLAM on Echo Things</title>
+    <link>/tags/slam/</link>
+    <description>Recent content in SLAM on Echo Things</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Tue, 15 Sep 2020 23:29:24 +0800</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/slam/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -36,30 +36,6 @@
 由于网络相对来说比较简单，训练过程需要的数据量不是很复杂，一个人就足以采集。
 5. 实时判断 至此，整个工程已经基本完成了，判断的准确度出乎意料的还是挺高的。目前测试下来4个动作的识别准确的95%+是没有什么问题的。
 工程细节  对于特征点提取方面使用C++，而网络训练方面采用python（pytorch框架）。 系统参数有「相机内参」、「SIFT特征点阈值」、「时间的最小单位」、「使用多少个这样的单位」，采用配置文件的方式进行配置。  </description>
-    </item>
-    
-    <item>
-      <title>(Course Overview) Control of Mobile Robots</title>
-      <link>/posts/cource-mobilerobot/</link>
-      <pubDate>Mon, 10 Aug 2020 00:39:24 +0800</pubDate>
-      
-      <guid>/posts/cource-mobilerobot/</guid>
-      <description>class info  courcera Getech class link  cource review not so difficult
-Notes Mobile Robots Decrete time: $$ x_{k+1}=f(x_k, u_k) $$ Continuous time: $$ \frac{dx}{dt}=\dot x =f(x, u) $$ c.s. : map continuous -&amp;gt; discrete
-Taylor approx: $$ x(k\delta t+\delta t)=x(k\delta t)+\delta t\cdot \dot{x}(k\delta t) $$
-PID regulator $$ u(t) = K_pe(t)+K_i \int^t_0{e(\tau)d\tau}+ K_d\frac{de(t)}{dt} $$
- P : contribute to stability, resp. medium rate I : tracking, resp. slow rate, may cause oscillation D: resp.</description>
-    </item>
-    
-    <item>
-      <title>Some problems during configing url of hugo</title>
-      <link>/posts/new/</link>
-      <pubDate>Tue, 21 Jul 2020 13:46:38 +0800</pubDate>
-      
-      <guid>/posts/new/</guid>
-      <description>Problem: 设定posts和tags目录时跳转不对，会出现类似于&amp;lt;website&amp;gt;/&amp;lt;website&amp;gt;/post之类的情况
-Solution: 在config中设置post item的跳转地址为post，代表绝对路径，而不是/post，代表相对位置。
-如果设置为/post，在主界面可以正常跳转，但在其他界面无法转到正常的页面。./post也同理。</description>
     </item>
     
   </channel>
