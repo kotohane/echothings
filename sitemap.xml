@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/proj-spmat/</loc>
+    <loc>/achieve/</loc>
     <lastmod>2020-09-15T23:29:24+08:00</lastmod>
   </url>
   
@@ -18,7 +18,12 @@
   </url>
   
   <url>
-    <loc>/tags/projects/</loc>
+    <loc>/series/projects/</loc>
+    <lastmod>2020-09-15T23:29:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/series/</loc>
     <lastmod>2020-09-15T23:29:24+08:00</lastmod>
   </url>
   
@@ -33,12 +38,17 @@
   </url>
   
   <url>
+    <loc>/posts/proj-spmat/</loc>
+    <lastmod>2020-09-15T23:29:24+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/cource-mobilerobot/</loc>
     <lastmod>2020-08-10T00:39:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/course/</loc>
+    <loc>/series/courses/</loc>
     <lastmod>2020-08-10T00:39:24+08:00</lastmod>
   </url>
   
@@ -59,10 +69,6 @@
   
   <url>
     <loc>/blog/</loc>
-  </url>
-  
-  <url>
-    <loc>/series/</loc>
   </url>
   
 </urlset>
