@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>interview on Echo Things</title>
+    <link>/tags/interview/</link>
+    <description>Recent content in interview on Echo Things</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 19 Sep 2020 20:05:50 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>面试-地平线南京-图像算法实习(未通过)</title>
+      <link>/posts/job-horizonnj/</link>
+      <pubDate>Sat, 19 Sep 2020 20:05:50 +0800</pubDate>
+      
+      <guid>/posts/job-horizonnj/</guid>
+      <description>基本信息 公司：南京地平线 岗位：图像算法实习生 结果：未通过 具体情况 公司占了2层，整体上环境都挺不错的，不过面试整个过程太长了。 每两次面试之间都</description>
+    </item>
+    
+  </channel>
+</rss>
