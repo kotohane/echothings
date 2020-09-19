@@ -3,17 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/achieve/</loc>
-    <lastmod>2020-09-15T23:29:24+08:00</lastmod>
+    <loc>/tags/ai/</loc>
+    <lastmod>2020-09-19T12:14:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ai-development/</loc>
+    <lastmod>2020-09-19T12:14:08+08:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-09-15T23:29:24+08:00</lastmod>
+    <lastmod>2020-09-19T12:14:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/series/note/</loc>
+    <lastmod>2020-09-19T12:14:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/note-apsara2020/</loc>
+    <lastmod>2020-09-19T12:14:08+08:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/</loc>
+    <lastmod>2020-09-19T12:14:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/series/</loc>
+    <lastmod>2020-09-19T12:14:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-09-19T12:14:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/achieve/</loc>
     <lastmod>2020-09-15T23:29:24+08:00</lastmod>
   </url>
   
@@ -23,17 +53,7 @@
   </url>
   
   <url>
-    <loc>/series/</loc>
-    <lastmod>2020-09-15T23:29:24+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/slam/</loc>
-    <lastmod>2020-09-15T23:29:24+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2020-09-15T23:29:24+08:00</lastmod>
   </url>
   

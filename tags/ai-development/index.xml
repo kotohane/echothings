@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI development on Echo Things</title>
+    <link>/tags/ai-development/</link>
+    <description>Recent content in AI development on Echo Things</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 19 Sep 2020 12:14:08 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/ai-development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Note Apsara2020</title>
+      <link>/posts/note-apsara2020/</link>
+      <pubDate>Sat, 19 Sep 2020 12:14:08 +0800</pubDate>
+      
+      <guid>/posts/note-apsara2020/</guid>
+      <description>记录·AI云栖大会 AI的发展 Q：AI可以代替PID control吗？ A：AI可能和PID的应用场景有些不一样，RL一般用于决策的方面。 离散的</description>
+    </item>
+    
+  </channel>
+</rss>

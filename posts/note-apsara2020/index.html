@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="记录·AI云栖大会 AI的发展 Q：AI可以代替PID control吗？ A：AI可能和PID的应用场景有些不一样，RL一般用于决策的方面。 离散的" />
+<meta name="keywords" content=", AI, AI development" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="/posts/note-apsara2020/" />
+
+
+    <title>
+        
+            Note Apsara2020 :: Echo Things 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.f1352e03677ab41efb05b0d3c378e8fe16f2780273d06ebaa9241db08a6c22dc.css">
+
+
+
+
+
+
+<meta itemprop="name" content="Note Apsara2020">
+<meta itemprop="description" content="记录·AI云栖大会 AI的发展 Q：AI可以代替PID control吗？ A：AI可能和PID的应用场景有些不一样，RL一般用于决策的方面。 离散的">
+<meta itemprop="datePublished" content="2020-09-19T12:14:08&#43;08:00" />
+<meta itemprop="dateModified" content="2020-09-19T12:14:08&#43;08:00" />
+<meta itemprop="wordCount" content="922">
+<meta itemprop="image" content="/"/>
+
+
+
+<meta itemprop="keywords" content="AI,AI development," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/"/>
+
+<meta name="twitter:title" content="Note Apsara2020"/>
+<meta name="twitter:description" content="记录·AI云栖大会 AI的发展 Q：AI可以代替PID control吗？ A：AI可能和PID的应用场景有些不一样，RL一般用于决策的方面。 离散的"/>
+
+
+
+    <meta property="og:title" content="Note Apsara2020" />
+<meta property="og:description" content="记录·AI云栖大会 AI的发展 Q：AI可以代替PID control吗？ A：AI可能和PID的应用场景有些不一样，RL一般用于决策的方面。 离散的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/note-apsara2020/" />
+<meta property="og:image" content="/"/>
+<meta property="article:published_time" content="2020-09-19T12:14:08+08:00" />
+<meta property="article:modified_time" content="2020-09-19T12:14:08+08:00" /><meta property="og:site_name" content="Echo Things" />
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-09-19 12:14:08 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/js/katex/katex.min.css" >
+<script src="/js/katex/katex.min.js" > </script>
+<script src="/js/katex/contrib/auto-render.min.js" ></script>
+ 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body);
+    });
+</script>
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">EchoThings</span>
+            
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/posts">Posts</a></li><li><a href="/tags">Tags</a></li><li><a href="/series">Series</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+      <div style="position: fixed; left:10px;max-width:800px; overflow:auto; top: 200px; width: 15vw; bottom:50px">
+        
+<div class="post-toc" id="post-toc">
+<aside>
+    <div style="font-size: larger;align-content: center;"><b>- Catalog -</b></div>
+    
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#记录ai云栖大会httpswwwbilibilicomvideobv1md4y1o7rg">记录·<a href="https://www.bilibili.com/video/BV1MD4y1o7rg">AI云栖大会</a></a>
+      <ul>
+        <li><a href="#ai的发展">AI的发展</a></li>
+        <li><a href="#人脑方面">人脑方面</a></li>
+        <li><a href="#ai落地的问题">AI落地的问题</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    
+</aside>
+<a href="#" id="toc-toggle"></a>
+</div>
+
+
+      </div>
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        2 minutes
+      </p>
+    </div>
+
+    <article>
+      <div>
+        <span style="font-size: xx-large;">
+            <b>Note Apsara2020</b>
+          
+        </span>
+        <span style="color:gray">[Note]</span>
+      </div>
+        
+        
+      
+      
+
+      <div class="post-content">
+        <h2 id="记录ai云栖大会httpswwwbilibilicomvideobv1md4y1o7rg">记录·<a href="https://www.bilibili.com/video/BV1MD4y1o7rg">AI云栖大会</a></h2>
+<h3 id="ai的发展">AI的发展</h3>
+<ul>
+<li>
+<p>Q：AI可以代替PID control吗？</p>
+<ul>
+<li>A：AI可能和PID的应用场景有些不一样，RL一般用于决策的方面。
+离散的决策为主（连续的也是离散化来解决）
+<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p>Q：专项的AI专业的人的发展前景？</p>
+<ul>
+<li>
+<p>A：80%的时间能以80%的正确率解决80%的问题</p>
+</li>
+<li>
+<p>（这个问题并没有具体回答）</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>当时AI框架的起步：关于一些问题（人脸识别/相册的分类/数据库人脸之类的应用场景）。</p>
+<h3 id="人脑方面">人脑方面</h3>
+<h4 id="关于gpt-3">关于GPT-3</h4>
+<p>def. <a href="https://github.com/openai/gpt-3">一个开源的文字识别框架</a>来自于<a href="https://openai.com/blog/openai-api/">OpenAI</a>。具体介绍（<a href="https://en.wikipedia.org/wiki/GPT-3">英文维基</a>）</p>
+<p>目前这种大规模网络存在的问题：功耗太大，训练一个模型需要的成本高达几百万美元，而人脑的话只需要20W的功耗。</p>
+<blockquote>
+<p>个人Note：机器人的能耗对比人的能耗大概是10倍（主要是电机这方面的耗损），这也是为什么有些时候机器人不能完全取代人的原因。在一些领域、一些地区，机器人的电费和维护的费用甚至要高于人的工资。</p>
+</blockquote>
+<h4 id="ai的不足之处">AI的不足之处</h4>
+<p>一旦关系到严密的逻辑方面，AI的表现就不是很好。GPT-3就是暴力美学的体现之一。</p>
+<h4 id="人类的规则">人类的规则</h4>
+<p>关于事件追责的问题，现在还没有很好的解决。没有办法reasoning，追查到问题到底出现在哪里。</p>
+<p>eg. 自动驾驶的解决方法是模块化，分为视觉、决策等方面，能够追查的问题出在那一个方面。
+Tesla和Waymo做的自动驾驶看起来没什么区别，但是背后的逻辑可能是完全不一样的。
+需要时间慢慢去迭代。</p>
+<h3 id="ai落地的问题">AI落地的问题</h3>
+<h4 id="应用场景">应用场景</h4>
+<p>在其他方面的应用比较好，在其他一些垂直领域，很难找到优秀的人去做和AI的结合。</p>
+<p>比如过工业、农业、金融、生命科学等场景。</p>
+<ol>
+<li>农产品的分类之类的</li>
+<li>工业界是一个十分细分、零碎的场景</li>
+<li>生命科学方面：手术刀三位重建等有意思的场景</li>
+</ol>
+<blockquote>
+<p>个人Note：生命科学/医学这个方面是个人比较看好的领域，需要大量的经验丰富的人工，AI的加入会对医生和医疗过程是一种很好的辅助。</p>
+</blockquote>
+<p>eg. 之前打字员消失的原因：</p>
+<ol>
+<li>科技的进步（输入法的进步/次要原因）</li>
+<li>电脑的普及（每个人技术的普及/主要原因）
+以后可能AI算法工程师会最先被auto learning取代。</li>
+</ol>
+<h4 id="创业前景">创业前景</h4>
+<p>国内的特点：人力成本比较低但是比较偏重于回报。希望能有一种比较良好的收购体系，硅谷每年能收购（并购）200多起小公司（几千万～1亿左右），中国的大公司不是很喜欢这种模式。</p>
+
+      </div>
+    </article>
+
+
+    <hr />
+
+    <div class="post-info">
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+            <line x1="7" y1="7" x2="7" y2="7"></line>
+          </svg><span class="tag"><a href="/tags/ai/">AI</a></span><span class="tag"><a href="/tags/ai-development/">AI development</a></span>
+        </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        922 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        2020-09-19 12:14 CST
+      </p>
+    </div>
+
+    
+
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Echo Things</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>

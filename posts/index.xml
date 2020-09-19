@@ -6,8 +6,76 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Tue, 15 Sep 2020 23:29:24 +0800</lastBuildDate>
+        <lastBuildDate>Sat, 19 Sep 2020 12:14:08 +0800</lastBuildDate>
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Note Apsara2020</title>
+            <link>/posts/note-apsara2020/</link>
+            <pubDate>Sat, 19 Sep 2020 12:14:08 +0800</pubDate>
+            
+            <guid>/posts/note-apsara2020/</guid>
+            <description>记录·AI云栖大会 AI的发展 Q：AI可以代替PID control吗？ A：AI可能和PID的应用场景有些不一样，RL一般用于决策的方面。 离散的</description>
+            <content type="html"><![CDATA[<h2 id="记录ai云栖大会httpswwwbilibilicomvideobv1md4y1o7rg">记录·<a href="https://www.bilibili.com/video/BV1MD4y1o7rg">AI云栖大会</a></h2>
+<h3 id="ai的发展">AI的发展</h3>
+<ul>
+<li>
+<p>Q：AI可以代替PID control吗？</p>
+<ul>
+<li>A：AI可能和PID的应用场景有些不一样，RL一般用于决策的方面。
+离散的决策为主（连续的也是离散化来解决）
+<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>
+<p>Q：专项的AI专业的人的发展前景？</p>
+<ul>
+<li>
+<p>A：80%的时间能以80%的正确率解决80%的问题</p>
+</li>
+<li>
+<p>（这个问题并没有具体回答）</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>当时AI框架的起步：关于一些问题（人脸识别/相册的分类/数据库人脸之类的应用场景）。</p>
+<h3 id="人脑方面">人脑方面</h3>
+<h4 id="关于gpt-3">关于GPT-3</h4>
+<p>def. <a href="https://github.com/openai/gpt-3">一个开源的文字识别框架</a>来自于<a href="https://openai.com/blog/openai-api/">OpenAI</a>。具体介绍（<a href="https://en.wikipedia.org/wiki/GPT-3">英文维基</a>）</p>
+<p>目前这种大规模网络存在的问题：功耗太大，训练一个模型需要的成本高达几百万美元，而人脑的话只需要20W的功耗。</p>
+<blockquote>
+<p>个人Note：机器人的能耗对比人的能耗大概是10倍（主要是电机这方面的耗损），这也是为什么有些时候机器人不能完全取代人的原因。在一些领域、一些地区，机器人的电费和维护的费用甚至要高于人的工资。</p>
+</blockquote>
+<h4 id="ai的不足之处">AI的不足之处</h4>
+<p>一旦关系到严密的逻辑方面，AI的表现就不是很好。GPT-3就是暴力美学的体现之一。</p>
+<h4 id="人类的规则">人类的规则</h4>
+<p>关于事件追责的问题，现在还没有很好的解决。没有办法reasoning，追查到问题到底出现在哪里。</p>
+<p>eg. 自动驾驶的解决方法是模块化，分为视觉、决策等方面，能够追查的问题出在那一个方面。
+Tesla和Waymo做的自动驾驶看起来没什么区别，但是背后的逻辑可能是完全不一样的。
+需要时间慢慢去迭代。</p>
+<h3 id="ai落地的问题">AI落地的问题</h3>
+<h4 id="应用场景">应用场景</h4>
+<p>在其他方面的应用比较好，在其他一些垂直领域，很难找到优秀的人去做和AI的结合。</p>
+<p>比如过工业、农业、金融、生命科学等场景。</p>
+<ol>
+<li>农产品的分类之类的</li>
+<li>工业界是一个十分细分、零碎的场景</li>
+<li>生命科学方面：手术刀三位重建等有意思的场景</li>
+</ol>
+<blockquote>
+<p>个人Note：生命科学/医学这个方面是个人比较看好的领域，需要大量的经验丰富的人工，AI的加入会对医生和医疗过程是一种很好的辅助。</p>
+</blockquote>
+<p>eg. 之前打字员消失的原因：</p>
+<ol>
+<li>科技的进步（输入法的进步/次要原因）</li>
+<li>电脑的普及（每个人技术的普及/主要原因）
+以后可能AI算法工程师会最先被auto learning取代。</li>
+</ol>
+<h4 id="创业前景">创业前景</h4>
+<p>国内的特点：人力成本比较低但是比较偏重于回报。希望能有一种比较良好的收购体系，硅谷每年能收购（并购）200多起小公司（几千万～1亿左右），中国的大公司不是很喜欢这种模式。</p>
+]]></content>
+        </item>
         
         <item>
             <title>机器人运行状态检测系统</title>
