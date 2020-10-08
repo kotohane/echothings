@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Robot on Echo Things</title>
-    <link>/tags/robot/</link>
-    <description>Recent content in Robot on Echo Things</description>
+    <title>Course on Echo Things</title>
+    <link>/series/course/</link>
+    <description>Recent content in Course on Echo Things</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Wed, 23 Sep 2020 10:03:36 +0800</lastBuildDate>
     
-	<atom:link href="/tags/robot/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/series/course/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,19 +19,6 @@
       
       <guid>/posts/cource-robotics5/</guid>
       <description>Gaussian Distribution 1d-Gaussian 高斯分布的好处 参数少（2个，µ, x) Gaussian x Gaussian -&amp;gt; Gaussian Likelihood : 已知分布求概率分布 max Likelihood : 最有可能的概率分布情况 其中{xi}已知，µ,sigma待求 $$ \hat{\mu},\hat{\sigma}</description>
-    </item>
-    
-    <item>
-      <title>Control of Mobile Robots</title>
-      <link>/posts/cource-mobilerobot/</link>
-      <pubDate>Mon, 10 Aug 2020 00:39:24 +0800</pubDate>
-      
-      <guid>/posts/cource-mobilerobot/</guid>
-      <description>class info  courcera Getech class link  cource review not so difficult
-Notes Mobile Robots Decrete time: $$ x_{k+1}=f(x_k, u_k) $$ Continuous time: $$ \frac{dx}{dt}=\dot x =f(x, u) $$ c.s. : map continuous -&amp;gt; discrete
-Taylor approx: $$ x(k\delta t+\delta t)=x(k\delta t)+\delta t\cdot \dot{x}(k\delta t) $$
-PID regulator $$ u(t) = K_pe(t)+K_i \int^t_0{e(\tau)d\tau}+ K_d\frac{de(t)}{dt} $$
- P : contribute to stability, resp. medium rate I : tracking, resp. slow rate, may cause oscillation D: resp.</description>
     </item>
     
   </channel>

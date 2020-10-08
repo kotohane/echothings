@@ -6,8 +6,139 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Sat, 19 Sep 2020 20:05:50 +0800</lastBuildDate>
+        <lastBuildDate>Wed, 23 Sep 2020 10:03:36 +0800</lastBuildDate>
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Robotics: Estimation and Learning</title>
+            <link>/posts/cource-robotics5/</link>
+            <pubDate>Wed, 23 Sep 2020 10:03:36 +0800</pubDate>
+            
+            <guid>/posts/cource-robotics5/</guid>
+            <description>Gaussian Distribution 1d-Gaussian 高斯分布的好处 参数少（2个，µ, x) Gaussian x Gaussian -&amp;gt; Gaussian Likelihood : 已知分布求概率分布 max Likelihood : 最有可能的概率分布情况 其中{xi}已知，µ,sigma待求 $$ \hat{\mu},\hat{\sigma}</description>
+            <content type="html"><![CDATA[<h2 id="gaussian-distribution">Gaussian Distribution</h2>
+<h3 id="1d-gaussian">1d-Gaussian</h3>
+<ul>
+<li>高斯分布的好处
+<ul>
+<li>参数少（2个，<code>µ, x</code>)</li>
+<li>Gaussian x Gaussian -&gt; Gaussian</li>
+</ul>
+</li>
+</ul>
+<p><img src="/imgrobotics5/1-1.png" alt="Gaussian Distribution 1D"></p>
+<p>Likelihood : 已知分布求概率分布</p>
+<p>max Likelihood : 最有可能的概率分布情况
+<img src="/imgrobotics5/1-2.png" alt="def of Likelihood">
+其中{xi}已知，µ,sigma待求
+$$
+\hat{\mu},\hat{\sigma} = \underset{\mu,\sigma}{\arg\max}\ p({x_i}|\mu,\sigma)= \underset{\mu,\sigma}{\arg\max} \prod_{i=1}^N p(x_i|\mu,\sigma)
+$$
+以上公式的前提条件是相互独立</p>
+<p>可以用log把累加当作累乘去做，以上公式转化为
+$$
+\hat{\mu},\hat{\sigma} = \underset{\mu,\sigma}{\arg\max} \sum_{i=1}^N ln\ p(x_i|\mu,\sigma) = \underset{\mu,\sigma}{\arg\max} \sum_{i=1}^N[-\frac{(x_i-\mu)^2}{2\sigma^2} - ln\sigma - ln\sqrt{2\pi} ]
+$$
+$$
+= \underset{\mu,\sigma}{\arg\min} \sum_{i=1}^N[\frac{(x_i-\mu)^2}{2\sigma^2} + ln\sigma] \overset{def}{===} \underset{\mu,\sigma}{\arg\min} J(\mu,\sigma)
+$$</p>
+<h3 id="maximun-likelihood-estimatemle">Maximun Likelihood Estimate(MLE)</h3>
+<p>the MLE SOllution
+$$
+\hat{\mu} = \frac{1}{N} \sum_{i=1}^N x_i
+$$
+$$
+\hat{\sigma}^2 =\frac{1}{N} \sum_{i=1}^{N}(x_i-\hat{\mu}^2)
+$$</p>
+<h3 id="multivariate-gaussian">multivariate Gaussian</h3>
+<p>用矩阵的形式表示高斯分布</p>
+<h3 id="gaussian-mixture-model-gmm">Gaussian Mixture Model (GMM)</h3>
+<p>$$
+p(x)=\sum_{k=1}^K w_k g_k (x|\mu_k,\Sigma_k)
+$$</p>
+<p>Exceptation Maximun(EM)过程</p>
+<ol>
+<li>确定µ，Sigma【确定每个高斯模型的变量/GMM中高斯模型的个数/迭代初值</li>
+<li>E-step, fixed µ,Sigma-&gt; update zki
+$$
+z_k^i = \frac{g_k(x_i|\mu_k,\Sigma_k)}{\sum_{k=1}^Kg_k(x_i|\mu_k,\Sigma_k)}
+$$</li>
+<li>fix <code>zki</code> -&gt; update M, Sigma</li>
+<li>stop if converge</li>
+</ol>
+<h3 id="asgm-week-1">Asgm week 1</h3>
+<p>利用之前学过的3种方法都可以解决。</p>
+<h3 id="jensen不等式">Jensen不等式</h3>
+<p>convex:
+$$
+f(\frac{x+y}2)\ge \frac{f(x)+f(y)}2
+$$
+concave:
+$$
+f(\frac{x+y}2)\le \frac{f(x)+f(y)}2
+$$
+所以
+$$
+ln\ p(X|\theta)=ln\sum_Zp(X,Z|\theta)
+=ln\sum_Zq(Z) \frac{p(X,Z|\theta)}{q(Z)}
+$$
+$$
+\ge\sum_Zln\frac{p(X,Z|\theta)}{q(Z)} \leftarrow 下限
+$$
+所以问题变成，find
+$$
+\theta^*=\underset{\theta}{\arg\max}G(\theta|\theta_0)
+$$
+其中
+$$
+G=\sum_Zln\frac{p(X,Z|\theta)}{q(Z)}
+$$</p>
+<h3 id="exceptation-maximunem">Exceptation Maximun(EM)</h3>
+<ol>
+<li>initial theta_hat</li>
+<li>find a lower bound D(theta|theta_hat)</li>
+<li>theta_hat_new = argmax_theta G(theta|theta_hat)</li>
+<li>stop of converge</li>
+</ol>
+<h2 id="mapping">Mapping</h2>
+<h3 id="concept">concept</h3>
+<h4 id="基本步骤思路">基本步骤（思路）</h4>
+<p>Metric Maps -&gt; Occupancy Grid Mapping（占据栅格地图）-&gt; 3D Mapping</p>
+<h4 id="types-of-maps">types of maps</h4>
+<ol>
+<li>Metric Map : (x,y)，使用坐标表示 eg. 世界地图</li>
+<li>Topological Map : Nodes and Arcs, eg. 地铁运营图</li>
+<li>Semantic : eg. campus map</li>
+</ol>
+<h4 id="problems">problems</h4>
+<ol>
+<li>noisy measurement</li>
+<li>motion involved</li>
+<li>change over time</li>
+</ol>
+<h3 id="occupancy-grid-mapping">Occupancy Grid Mapping</h3>
+<p><strong>总体目标： 迭代计算出free和occupied的grid</strong></p>
+<p>occupancy: def
+$$
+m_{x,y} = {free, occupied} \rightarrow {0,1}
+$$</p>
+<p>odd/logodd
+$$
+odd \overset{def}{===} \frac{X(happen)}{X(not happen)}
+$$
+$$
+= \frac{p(m_{x,y}=1|z)}{p(m_{x,y}=0|z)}
+$$
+$$
+logodd = log(odd) = log\frac{p(z|m_{x,y}=1)p(m_{x,y}=1)}{p(z|m_{x,y}=0)p(m_{x,y}=0)}
+$$
+$$
+= log\frac{p(z|m_{x,y}=1)}{p(z|m_{x,y}=0)} + log\frac{p(m_{x,y}=1)}{p(m_{x,y}=0)}
+$$
+update:
+logadd += logadd_meas</p>
+]]></content>
+        </item>
         
         <item>
             <title>面试-地平线南京-图像算法实习(未通过)</title>
