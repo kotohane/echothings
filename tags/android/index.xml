@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on Echo Things</title>
-    <link>/series/projects/</link>
-    <description>Recent content in Projects on Echo Things</description>
+    <title>Android on Echo Things</title>
+    <link>/tags/android/</link>
+    <description>Recent content in Android on Echo Things</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 06 Feb 2021 14:00:00 +0800</lastBuildDate><atom:link href="/series/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Feb 2021 14:00:00 +0800</lastBuildDate><atom:link href="/tags/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gait Analysis Project (Android app)</title>
       <link>/posts/proj-gaitanalysis/</link>
@@ -18,12 +18,12 @@
     </item>
     
     <item>
-      <title>机器人运行状态检测系统</title>
-      <link>/posts/proj-spmat/</link>
-      <pubDate>Tue, 15 Sep 2020 23:29:24 +0800</pubDate>
+      <title>Android_init</title>
+      <link>/posts/android_init/</link>
+      <pubDate>Sun, 31 Jan 2021 21:26:39 +0800</pubDate>
       
-      <guid>/posts/proj-spmat/</guid>
-      <description>关于项目 名称 机器人运行状态检测系统 Feature Exaction and Motion Estimation in Robot Navigation 地址 kotohane/spmat 想法来源 大二的时候在实验室的各种学习中（当时觉得学的太杂了什么都没学会，现在觉得当时</description>
+      <guid>/posts/android_init/</guid>
+      <description>Android Learning 1 Coding环境 Programming Java Kotlin Android Studio Android Studio IDE Overview Project Structure — Java/Kotlin, XML, .gradle files 核心组件 Android Component Activity — Activity Lifecycle, Tasks &amp;amp; Back Stack Service Broadcast Receiver Content Provider Intents Types of Intent - Implicit, Explicit Intent Filter Static User Interface View — Button, ImageView, TextView, EditText, and etc ViewGroup - LinearLayout, RelativeLayout,</description>
     </item>
     
   </channel>

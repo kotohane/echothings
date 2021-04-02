@@ -7,10 +7,33 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 23 Sep 2020 10:03:36 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 18 Feb 2021 22:52:54 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android Bluetooth使用</title>
+      <link>/posts/android-bluetooth/</link>
+      <pubDate>Thu, 18 Feb 2021 22:52:54 +0800</pubDate>
+      
+      <guid>/posts/android-bluetooth/</guid>
+      <description>Background 最近在做毕业设计的时候需要用到嵌入式设备（HC-06）和手机通信，然后我选择了蓝牙的方案。 方案 使用逻辑 为了支持不同的设备，需要设计一个绑定</description>
+    </item>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gait Analysis Project (Android app)</title>
+      <link>/posts/proj-gaitanalysis/</link>
+      <pubDate>Sat, 06 Feb 2021 14:00:00 +0800</pubDate>
+      
+      <guid>/posts/proj-gaitanalysis/</guid>
+      <description>Background It is my degree individual engineering project in Northumbria University . Also, I would like to practice my ability of mobile development in Android. Overview The project is devided into Embedded part and Android app part. Embedded part Hardware: consisting of a development board NXP FRDM-KL25Z, a magnetometer and a bluetooth chip HC-06. Software: implementing function of ADC, I2C, LED-PWM, UART. Detecting imu and mag data and transmit the</description>
+    </item>
     
+    <item>
+      <title>Android_init</title>
+      <link>/posts/android_init/</link>
+      <pubDate>Sun, 31 Jan 2021 21:26:39 +0800</pubDate>
+      
+      <guid>/posts/android_init/</guid>
+      <description>Android Learning 1 Coding环境 Programming Java Kotlin Android Studio Android Studio IDE Overview Project Structure — Java/Kotlin, XML, .gradle files 核心组件 Android Component Activity — Activity Lifecycle, Tasks &amp;amp; Back Stack Service Broadcast Receiver Content Provider Intents Types of Intent - Implicit, Explicit Intent Filter Static User Interface View — Button, ImageView, TextView, EditText, and etc ViewGroup - LinearLayout, RelativeLayout,</description>
+    </item>
     
     <item>
       <title>Robotics: Estimation and Learning</title>
@@ -19,15 +42,6 @@
       
       <guid>/posts/cource-robotics5/</guid>
       <description>Gaussian Distribution 1d-Gaussian 高斯分布的好处 参数少（2个，µ, x) Gaussian x Gaussian -&amp;gt; Gaussian Likelihood : 已知分布求概率分布 max Likelihood : 最有可能的概率分布情况 其中{xi}已知，µ,sigma待求 $$ \hat{\mu},\hat{\sigma}</description>
-    </item>
-    
-    <item>
-      <title>面试-地平线南京-图像算法实习(未通过)</title>
-      <link>/posts/job-horizonnj/</link>
-      <pubDate>Sat, 19 Sep 2020 20:05:50 +0800</pubDate>
-      
-      <guid>/posts/job-horizonnj/</guid>
-      <description>基本信息 公司：南京地平线 岗位：图像算法实习生 结果：未通过 具体情况 公司占了2层，整体上环境都挺不错的，不过面试整个过程太长了。 每两次面试之间都</description>
     </item>
     
     <item>

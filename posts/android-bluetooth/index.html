@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Background 最近在做毕业设计的时候需要用到嵌入式设备（HC-06）和手机通信，然后我选择了蓝牙的方案。 方案 使用逻辑 为了支持不同的设备，需要设计一个绑定" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="/posts/android-bluetooth/" />
+
+
+    <title>
+        
+            Android Bluetooth使用 :: Echo Things 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.f1352e03677ab41efb05b0d3c378e8fe16f2780273d06ebaa9241db08a6c22dc.css">
+
+
+
+
+
+
+<meta itemprop="name" content="Android Bluetooth使用">
+<meta itemprop="description" content="Background 最近在做毕业设计的时候需要用到嵌入式设备（HC-06）和手机通信，然后我选择了蓝牙的方案。 方案 使用逻辑 为了支持不同的设备，需要设计一个绑定">
+<meta itemprop="datePublished" content="2021-02-18T22:52:54+08:00" />
+<meta itemprop="dateModified" content="2021-02-18T22:52:54+08:00" />
+<meta itemprop="wordCount" content="521">
+<meta itemprop="image" content="/"/>
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/"/>
+
+<meta name="twitter:title" content="Android Bluetooth使用"/>
+<meta name="twitter:description" content="Background 最近在做毕业设计的时候需要用到嵌入式设备（HC-06）和手机通信，然后我选择了蓝牙的方案。 方案 使用逻辑 为了支持不同的设备，需要设计一个绑定"/>
+
+
+
+    <meta property="og:title" content="Android Bluetooth使用" />
+<meta property="og:description" content="Background 最近在做毕业设计的时候需要用到嵌入式设备（HC-06）和手机通信，然后我选择了蓝牙的方案。 方案 使用逻辑 为了支持不同的设备，需要设计一个绑定" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/android-bluetooth/" />
+<meta property="og:image" content="/"/>
+<meta property="article:published_time" content="2021-02-18T22:52:54+08:00" />
+<meta property="article:modified_time" content="2021-02-18T22:52:54+08:00" /><meta property="og:site_name" content="Echo Things" />
+
+
+
+
+
+
+    <meta property="article:published_time" content="2021-02-18 22:52:54 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/js/katex/katex.min.css" >
+<script src="/js/katex/katex.min.js" > </script>
+<script src="/js/katex/contrib/auto-render.min.js" ></script>
+ 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body);
+    });
+</script>
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">EchoThings</span>
+            
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/posts">Posts</a></li><li><a href="/tags">Tags</a></li><li><a href="/series">Series</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+      <div style="position: fixed; left:20px;max-width:800px; overflow:auto;vertical-align: middle; width: 30vw;">
+        
+<div class="post-toc" id="post-toc">
+<aside>
+    <div style="font-size: larger;align-content: center;"><b>- Catalog -</b></div>
+    
+    
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#方案">方案</a>
+      <ul>
+        <li><a href="#使用逻辑">使用逻辑</a></li>
+        <li><a href="#连接断开">连接/断开</a></li>
+        <li><a href="#编码">编码</a></li>
+      </ul>
+    </li>
+    <li><a href="#android-bluetooth">Android Bluetooth</a>
+      <ul>
+        <li><a href="#权限">权限</a></li>
+        <li><a href="#连接过程">连接过程</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    
+</aside>
+<a href="#" id="toc-toggle"></a>
+</div>
+
+
+      </div>
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        2 minutes
+      </p>
+    </div>
+
+    <article>
+      <div>
+        <span style="font-size: xx-large;">
+            <b>Android Bluetooth使用</b>
+          
+        </span>
+        <span style="color:gray"></span>
+      </div>
+        
+        
+      
+      
+
+      <div class="post-content">
+        <h2 id="background">Background</h2>
+<p>最近在做毕业设计的时候需要用到嵌入式设备（HC-06）和手机通信，然后我选择了蓝牙的方案。</p>
+<h2 id="方案">方案</h2>
+<h3 id="使用逻辑">使用逻辑</h3>
+<p>为了支持不同的设备，需要设计一个绑定的机制，具体表现为搜索周围的设备，然后记录蓝牙芯片的Mac地址，保存下来使用。在连接的时候，需要有一个按钮负责连接和断开，同时能够显示连接状态。</p>
+<h3 id="连接断开">连接/断开</h3>
+<p>蓝牙连接的过程是一个耗时操作，显然不能放在主线程里。同时，连接过后的与板子的通信也需要一个单独的线程来维持。UI的变化（TextView，canvas）需要在主线程中完成。</p>
+<h3 id="编码">编码</h3>
+<p>由于Java中不支持<code>unsigned char</code>的数据格式，为了避免复杂化和不必要的麻烦，我把一个数据分为4个字节。板子的UART口寄存器一般都是一个8位寄存器，采用字节来计数比较方便。</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据类型</td>
+<td>符号位</td>
+<td>高8位</td>
+<td>低8位</td>
+</tr>
+</tbody>
+</table>
+<h2 id="android-bluetooth">Android Bluetooth</h2>
+<h3 id="权限">权限</h3>
+<p>在使用前要声明蓝牙的权限并动态申请权限。
+前2个蓝牙相关的先不说，后一个地点的是为了搜索附近的蓝牙设备，如果不申请在添加设备时候会遇到一些问题。</p>
+<p>在manifest中声明</p>
+<pre><code>&lt;manifest ... &gt;
+  &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH&quot; /&gt;
+  &lt;uses-permission android:name=&quot;android.permission.BLUETOOTH_ADMIN&quot; /&gt;
+
+  &lt;uses-permission android:name=&quot;android.permission.ACCESS_FINE_LOCATION&quot; /&gt;
+&lt;/manifest&gt;
+</code></pre><h3 id="连接过程">连接过程</h3>
+<p>在连接过程中需要用到的东西有(针对每一个连接，同时连接2个板子需要2套)：</p>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>item</th>
+<th>desp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>MacAddress</td>
+<td>蓝牙芯片的Mac地址</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code>private String MacAddress;
+    static final UUID SerialPort_UUID = UUID.fromString(&quot;00001101-0000-1000-8000-00805F9B34FB&quot;);
+    public boolean isBlueToothConnected;
+    public BluetoothAdapter mBluetoothAdapter;
+    private BluetoothDevice bluetoothDevice;
+    public BluetoothSocket mSocket;
+</code></pre>
+      </div>
+    </article>
+
+
+    <hr />
+
+    <div class="post-info">
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        521 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        2021-02-18 22:52 CST
+      </p>
+    </div>
+
+    
+
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Echo Things @ kotoar</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.dc716e9092c9820b77f96da294d0120aeeb189b5bcea9752309ebea27fd53bbe6b13cffb2aca8ecf32525647ceb7001f76091de4199ac5a3caa432c070247f5b.js" integrity="sha512-3HFukJLJggt3&#43;W2ilNASCu6xibW86pdSMJ6&#43;on/VO75rE8/7KsqOzzJSVkfOtwAfdgkd5BmaxaPKpDLAcCR/Ww=="></script>
+
+
+
+    </body>
+</html>

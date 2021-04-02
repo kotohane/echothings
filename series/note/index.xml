@@ -7,10 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 19 Sep 2020 12:14:08 +0800</lastBuildDate>
-    
-	<atom:link href="/series/note/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 31 Jan 2021 21:26:39 +0800</lastBuildDate><atom:link href="/series/note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android_init</title>
+      <link>/posts/android_init/</link>
+      <pubDate>Sun, 31 Jan 2021 21:26:39 +0800</pubDate>
+      
+      <guid>/posts/android_init/</guid>
+      <description>Android Learning 1 Coding环境 Programming Java Kotlin Android Studio Android Studio IDE Overview Project Structure — Java/Kotlin, XML, .gradle files 核心组件 Android Component Activity — Activity Lifecycle, Tasks &amp;amp; Back Stack Service Broadcast Receiver Content Provider Intents Types of Intent - Implicit, Explicit Intent Filter Static User Interface View — Button, ImageView, TextView, EditText, and etc ViewGroup - LinearLayout, RelativeLayout,</description>
+    </item>
     
     <item>
       <title>Note Apsara2020</title>
